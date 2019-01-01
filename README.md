@@ -9,10 +9,10 @@ spi_cfg hooks onto the VSX spi programming device files.
 
 ## Build
 
-Run CMake
-  `cmake CMakeLists.txt`
-Run make
-  `make`
+Run CMake  `cmake CMakeLists.txt`
+
+Run make  `make`
+
 spi_cfg executable will be in './bin'
 
 ## Arguments
@@ -23,25 +23,25 @@ spi_cfg (-b|--board) integer (-l|--lane) integer (-c|--cmd) string [(-h|--help)]
 
 Options:
 
--h or --help: Displays this information.
+  -h or --help: Displays this information.
 
--b or --board integer: Board number. Required.
+  -b or --board integer: Board number. Required.
 
--l or --lane integer: Lane number. Required.
+  -l or --lane integer: Lane number. Required.
 
--c or --cmd string: Command. Required.
+  -c or --cmd string: Command. Required.
 
--a or --sea string: SEA file.
+  -a or --sea string: SEA file.
 
--d or --sed string: SED file.
+  -d or --sed string: SED file.
 
--m or --mask integer: FPGA Select.
+  -m or --mask integer: FPGA Select.
 
--f or --freq integer: SPI Frequency.
+  -f or --freq integer: SPI Frequency.
 
--p or --pol integer: SPI Polarity.
+  -p or --pol integer: SPI Polarity.
 
--o or --phase integer: SPI Phase.
+  -o or --phase integer: SPI Phase.
 
 <table>
 	<tr> <th>flag</th> <th>description</th> <th>normal value</th> <th>accepted range</th> </tr>
