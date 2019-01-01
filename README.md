@@ -18,18 +18,29 @@ spi_cfg executable will be in './bin'
 ## Arguments
 
 Usage example:
+
 spi_cfg (-b|--board) integer (-l|--lane) integer (-c|--cmd) string [(-h|--help)] [(-a|--sea) string] [(-d|--sed) string] [(-m|--mask) integer] [(-f|--freq) integer] [(-p|--pol) integer] [(-o|--phase) integer]
 
 Options:
+
 -h or --help: Displays this information.
+
 -b or --board integer: Board number. Required.
+
 -l or --lane integer: Lane number. Required.
+
 -c or --cmd string: Command. Required.
+
 -a or --sea string: SEA file.
+
 -d or --sed string: SED file.
+
 -m or --mask integer: FPGA Select.
+
 -f or --freq integer: SPI Frequency.
+
 -p or --pol integer: SPI Polarity.
+
 -o or --phase integer: SPI Phase.
 
 <table>
@@ -46,9 +57,11 @@ Options:
 	<tr> <th>-o</th> <th>SPI Phase</th> <th>0</th> <th>0-1</th> </tr>
 </table>
 DCE FPGA mask (-m)
+	
 	This is a binary mask. the values in the above table are hexadecimal values. 0x7F in binary is 0111 1111. The value is in big-endian format. 
 
 Command Options (-c)
+
 <table>
 	<tr> <th>Command</th> <th>Description</th> <th>Req Arguments</th></tr>
 	<tr> <th>reset_all</th> <th>sends a reset command that puts all selected DCE FPGAs into a null state (-m has no effect)</th> <th>n/a</th></tr>
@@ -56,7 +69,7 @@ Command Options (-c)
 	<tr> <th>prog_pulse</th> <th>sends a test pulse down the SPI lines to ensure everything is initialized correctly</th> <th>n/a</th></tr>
 	<tr> <th>prog_fpga</th> <th>programs the selected DCE FPGAs with the programming files</th> <th>-a,-d,-m</th></tr>
 </table>
-flag, desription, normal value, accepted range, default value
+
 ## Examples
 
 see scripts in `/bin` for usage examples
