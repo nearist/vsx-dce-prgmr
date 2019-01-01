@@ -33,28 +33,28 @@ Options:
 -o or --phase integer: SPI Phase.
 
 <table>
-	<tr> <tc>flag</tc> <tc>description</tc> <tc>normal value</tc> <tc>accepted range</tc> </tr>
-	<tr> <tc>-h</tc> <tc> help, displays above</tc> <tc>n/a</tc> <tc>n/a</tc> </tr>
-	<tr> <tc>-b</tc> <tc>board #, determines the set of device files the utility will hook to in a multiVSX system (mandatory argument)</tc> <tc>0</tc> <tc>0-99</tc> </tr>
-	<tr> <tc>-l</tc> <tc>lane #, selects between the 3 lanes of the DCEs on the board selected (mandatory argument)</tc> <tc>0</tc> <tc>0-2</tc> </tr>
-	<tr> <tc>-c</tc> <tc>command, see table below for more information (mandatory argument)</tc> <tc>n/a</tc> <tc>n/a</tc> </tr>
-	<tr> <tc>-a</tc> <tc>fully qualified path to Algorithm file to be programmed</tc> <tc>n/a</tc> <tc>n/a</tc> </tr>
-	<tr> <tc>-d</tc> <tc>fully qualified path to Data file to be programmed</tc> <tc>n/a</tc> <tc>n/a</tc> </tr>
-	<tr> <tc>-m</tc> <tc>selects which of the 7 DCE fpgas of the lane and board selected will be programmed with the SED file</tc> <tc>0x7f</tc> <tc>0x01-0x7f</tc> </tr>
-	<tr> <tc>-f</tc> <tc>SPI sck Frequency </tc> <tc>10</tc> <tc>2-10</tc> </tr>
-	<tr> <tc>-p</tc> <tc>SPI Polarity</tc> <tc>0</tc> <tc>0-1</tc> </tr>
-	<tr> <tc>-o</tc> <tc>SPI Phase</tc> <tc>0</tc> <tc>0-1</tc> </tr>
+	<tr> <th>flag</th> <th>description</th> <th>normal value</th> <th>accepted range</th> </tr>
+	<tr> <th>-h</th> <th> help, displays above</th> <th>n/a</th> <th>n/a</th> </tr>
+	<tr> <th>-b</th> <th>board #, determines the set of device files the utility will hook to in a multiVSX system (mandatory argument)</th> <th>0</th> <th>0-99</th> </tr>
+	<tr> <th>-l</th> <th>lane #, selects between the 3 lanes of the DCEs on the board selected (mandatory argument)</th> <th>0</th> <th>0-2</th> </tr>
+	<tr> <th>-c</th> <th>command, see table below for more information (mandatory argument)</th> <th>n/a</th> <th>n/a</th> </tr>
+	<tr> <th>-a</th> <th>fully qualified path to Algorithm file to be programmed</th> <th>n/a</th> <th>n/a</th> </tr>
+	<tr> <th>-d</th> <th>fully qualified path to Data file to be programmed</th> <th>n/a</th> <th>n/a</th> </tr>
+	<tr> <th>-m</th> <th>selects which of the 7 DCE fpgas of the lane and board selected will be programmed with the SED file</th> <th>0x7f</th> <th>0x01-0x7f</th> </tr>
+	<tr> <th>-f</th> <th>SPI sck Frequency </th> <th>10</th> <th>2-10</th> </tr>
+	<tr> <th>-p</th> <th>SPI Polarity</th> <th>0</th> <th>0-1</th> </tr>
+	<tr> <th>-o</th> <th>SPI Phase</th> <th>0</th> <th>0-1</th> </tr>
 </table>
 DCE FPGA mask (-m)
 	This is a binary mask. the values in the above table are hexadecimal values. 0x7F in binary is 0111 1111. The value is in big-endian format. 
 
 Command Options (-c)
 <table>
-	<tr> <tc>Command</tc> <tc>Description</tc> <tc>Req Arguments</tc></tr>
-	<tr> <tc>reset_all</tc> <tc>sends a reset command that puts all selected DCE FPGAs into a null state (-m has no effect)</tc> <tc>n/a</tc></tr>
-	<tr> <tc>spi_cfg</tc> <tc>configure setting of the SPI controller in the Artix 7 Agent FPGA</tc> <tc>-f,-p,-o</tc></tr>
-	<tr> <tc>prog_pulse</tc> <tc>sends a test pulse down the SPI lines to ensure everything is initialized correctly</tc> <tc>n/a</tc></tr>
-	<tr> <tc>prog_fpga</tc> <tc>programs the selected DCE FPGAs with the programming files</tc> <tc>-a,-d,-m</tc></tr>
+	<tr> <th>Command</th> <th>Description</th> <th>Req Arguments</th></tr>
+	<tr> <th>reset_all</th> <th>sends a reset command that puts all selected DCE FPGAs into a null state (-m has no effect)</th> <th>n/a</th></tr>
+	<tr> <th>spi_cfg</th> <th>configure setting of the SPI controller in the Artix 7 Agent FPGA</th> <th>-f,-p,-o</th></tr>
+	<tr> <th>prog_pulse</th> <th>sends a test pulse down the SPI lines to ensure everything is initialized correctly</th> <th>n/a</th></tr>
+	<tr> <th>prog_fpga</th> <th>programs the selected DCE FPGAs with the programming files</th> <th>-a,-d,-m</th></tr>
 </table>
 flag, desription, normal value, accepted range, default value
 ## Examples
