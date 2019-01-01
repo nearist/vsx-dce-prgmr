@@ -58,7 +58,7 @@ Options:
 </table>
 DCE FPGA mask (-m)
 	
-	This is a binary mask. the values in the above table are hexadecimal values. 0x7F in binary is 0111 1111. The value is in big-endian format. 
+This is a binary mask. the values in the above table are hexadecimal values. 0x7F in binary is 0111 1111. The value is in big-endian format. 
 
 Command Options (-c)
 
